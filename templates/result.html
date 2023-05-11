@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+	<head><title>Result</title>
+		<style>
+		table, tr, th, td {border: 1px solid blue;}
+		</style>
+	</head>
+	<body>
+		<h1>Details of {{ session }} Session</h1>
+		<br>  <!-- Arts table -->
+		<table>
+			<h2>Arts table</h2>
+			<tr>
+				<th>StudentID</th>
+				<th>Venue</th>
+				<th>Performance</th>
+			</tr>
+			{%for record in arts%}
+			<tr>
+				{%for value in record%}
+				<td>{{ value }}</td>
+				{%endfor%}
+			</tr>
+			{%endfor%}
+		</table>
+		<br> <!-- Cultural table -->
+		<table>
+			<h2>Cultural table</h2>
+			<tr>
+				<th>StudentID</th>
+				<th>Venue</th>
+				<th>Race</th>
+			</tr>
+			{%for record in cultural%}
+			<tr>
+				{%for value in record%}
+				<td>{{ value }}</td>
+				{%endfor%}
+			</tr>
+			{%endfor%}		
+		</table>
+		<br> <!-- Sports table -->
+		<table>
+			<h2>Sports table</h2>
+			<tr>
+				<th>StudentID</th>
+				<th>Venue</th>
+				<th>Contact</th>
+				<th>Cost</th>
+			</tr>
+			{%for record in sports%}
+			<tr>
+				{%for value in record%}
+				<td>{{ value }}</td>
+				{%endfor%}
+			</tr>
+			{%endfor%}
+		</table>
+	<br>
+	<form action="{{url_for('home')}}" method='GET'>
+	<button style='background:cyan' type='submit' value='BACK'>BACK</button>
+	</form>
+	</body>
+</html>

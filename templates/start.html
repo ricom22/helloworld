@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+	<head> <title>Enrichment Form</title>
+	</head>
+	<body style='background:#7FFFDD; color:#3333FF; font-family:courier '>
+		<h2 style='text-align: center'>Enrichment Form</h2>
+		<form action={{ url_for('register') }} method='post'>
+		<table>
+			<tr>
+				<td>StudentID:</td>
+				<td><input type='text' name='studentid'></td>
+			</tr>
+			<tr>
+				<td>Type ('A','C' or 'S'):</td>
+				<td><input type='text' name='type'></td>
+			</tr>
+			<tr>
+				<td>Venue:</td>
+				<td><input type='text' name='venue'></td>
+			</tr>
+			<tr>
+				<td>Session:</td>
+				<td><input type='text' name='session'></td>
+			</tr>
+		</table>
+		<p>Fill in the extra detail(s) for the chosen type of activity:</p>
+		
+		<table>
+			<tr>
+				<td><b>Arts</b><br>Performance(True) or Visual Arts(False):</td>
+				<td><input type='text' name='performance'></td>
+			</tr>
+			<tr>
+				<td><b>Cultural</b><br>Race:</td>
+				<td><input type='text' name='race'></td>
+			</tr>
+			<tr>
+				<td><b>Sports</b><br>Contact(C) or Non-Contact(NC):</td>
+				<td><input type='text' name='contact'></td>
+			</tr>
+			<tr>
+				<td>Cost:</td>
+				<td><input type='text' name='cost'></td>
+				<td><input type='submit' name='register' value='Register'></td>
+			</tr>
+		</table>
+		<br>
+		<table
+			<tr>
+				<td><input type='submit' name='register' value='Generate AM Session'></td>
+				<td><input type='submit' name='register' value='Generate PM Session'></td>
+			</tr>
+		</table>
+		</form>
+	</body>
+</html>
